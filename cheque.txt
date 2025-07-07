@@ -1,0 +1,10 @@
+Cheque{id=1, chequeNumber='DZ1234567890', bankCode=1, accountNumber='0011234567890001', amount=85000, currency='DZD', status='PENDING', createdAt=2025-07-01T08:45}
+Cheque{id=2, chequeNumber='DZ9876543210', bankCode=7, accountNumber='0079988776655443', amount=42000, currency='DZD', status='PROCESSED', createdAt=2025-06-30T14:15}
+Cheque{id=3, chequeNumber='DZ4567891230', bankCode=16, accountNumber='0161122334455667', amount=123000.5, currency='DZD', status='REJECTED', createdAt=2025-07-03T10:30}
+Cheque{id=4, chequeNumber='DZ3322114455', bankCode=2, accountNumber='0025544332211990', amount=30500.75, currency='DZD', status='PENDING', createdAt=2025-07-02T09:00}
+Cheque{id=5, chequeNumber='DZ9988776655', bankCode=5, accountNumber='0051123581321345', amount=78000, currency='DZD', status='PENDING', createdAt=2025-07-01T12:30}
+Cheque{id=6, chequeNumber='DZ7766554433', bankCode=1, accountNumber='0019988776655000', amount=91000.2, currency='DZD', status='PROCESSED', createdAt=2025-06-29T17:45}
+Cheque{id=7, chequeNumber='DZ1122334455', bankCode=7, accountNumber='0070001112223334', amount=60400, currency='DZD', status='REJECTED', createdAt=2025-06-30T11:25}
+Cheque{id=8, chequeNumber='DZ8877665544', bankCode=16, accountNumber='0164455667788991', amount=110000, currency='DZD', status='PENDING', createdAt=2025-07-03T15:00}
+Cheque{id=9, chequeNumber='DZ2233445566', bankCode=2, accountNumber='0020011223344556', amount=55000.9, currency='DZD', status='PROCESSED', createdAt=2025-07-02T08:00}
+Cheque{id=10, chequeNumber='DZ6677889900', bankCode=5, accountNumber='0056677889900112', amount=73000, currency='DZD', status='REJECTED', createdAt=2025-07-04T16:20}

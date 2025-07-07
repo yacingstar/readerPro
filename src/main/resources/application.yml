@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:oracle:thin:@localhost:1521/FREEPDB1
-    username: system
-    password: admin
+    username: springbatch
+    password: springbatch
     driver-class-name: oracle.jdbc.OracleDriver
 
   jpa:
@@ -10,10 +10,23 @@ spring:
     hibernate:
       ddl-auto: none
   batch:
+    job:
+      name: chequeJob
+      enabled: true
     jdbc:
       initialize-schema: always
 
-
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health
 spring.docker.compose.enabled: false
 
-
+logging:
+  level:
+    org.springframework.batch: DEBUG
+    dz.eadn.readerpro: DEBUG

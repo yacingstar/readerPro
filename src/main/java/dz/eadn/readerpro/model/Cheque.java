@@ -1,14 +1,14 @@
 package dz.eadn.readerpro.model;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
-import java.math.BigDecimal;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-
 @Entity
 public class Cheque {
+
     @Id
     private long id;
 
@@ -18,9 +18,7 @@ public class Cheque {
     private BigDecimal amount;
     private String currency;
     private String status;
-    private LocalDate issueDate;
     private LocalDateTime createdAt;
-    private LocalDateTime processedAt;
 
     // Getters and Setters
     public long getId() {
@@ -79,14 +77,6 @@ public class Cheque {
         this.status = status;
     }
 
-    public LocalDate getIssueDate() {
-        return issueDate;
-    }
-
-    public void setIssueDate(LocalDate issueDate) {
-        this.issueDate = issueDate;
-    }
-
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
@@ -95,11 +85,9 @@ public class Cheque {
         this.createdAt = createdAt;
     }
 
-    public LocalDateTime getProcessedAt() {
-        return processedAt;
-    }
-
-    public void setProcessedAt(LocalDateTime processedAt) {
-        this.processedAt = processedAt;
+    @Override
+    public String toString() {
+        return String.format("Cheque{id=%d, chequeNumber='%s', bankCode=%d, accountNumber='%s', amount=%s, currency='%s', status='%s', createdAt=%s}",
+                id, chequeNumber, bankCode, accountNumber, amount, currency, status, createdAt);
     }
 }
