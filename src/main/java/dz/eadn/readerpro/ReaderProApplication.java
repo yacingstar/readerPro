@@ -36,22 +36,15 @@ public class ReaderProApplication {
 
         @Override
         public void run(String... args) throws Exception {
-            logger.info("Starting cheque job execution...");
+            logger.info("Starting cheque processing job...");
 
-            try {
-                JobParameters params = new JobParametersBuilder()
-                        .addLong("timestamp", System.currentTimeMillis())
-                        .toJobParameters();
+            JobParameters params = new JobParametersBuilder()
+                    .addLong("time", System.currentTimeMillis())
+                    .toJobParameters();
 
-                JobExecution execution = jobLauncher.run(chequeJob, params);
+            JobExecution execution = jobLauncher.run(chequeJob, params);
 
-                logger.info("Job execution completed with status: {}", execution.getStatus());
-                logger.info("Job execution summary: {}", execution.getExitStatus().getExitDescription());
-
-            } catch (Exception e) {
-                logger.error("Job execution failed: ", e);
-                throw e;
-            }
+            logger.info("Job execution status: {}", execution.getStatus());
         }
     }
 }
