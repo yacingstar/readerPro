@@ -7,10 +7,15 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter
+@Getter
 @Entity
 public class Cheque {
 
+    // Getters and Setters
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
@@ -22,71 +27,6 @@ public class Cheque {
     private String currency;
     private String status;
     private LocalDateTime createdAt;
-
-    // Getters and Setters
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getChequeNumber() {
-        return chequeNumber;
-    }
-
-    public void setChequeNumber(String chequeNumber) {
-        this.chequeNumber = chequeNumber;
-    }
-
-    public Integer getBankCode() {
-        return bankCode;
-    }
-
-    public void setBankCode(Integer bankCode) {
-        this.bankCode = bankCode;
-    }
-
-    public String getAccountNumber() {
-        return accountNumber;
-    }
-
-    public void setAccountNumber(String accountNumber) {
-        this.accountNumber = accountNumber;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public void setAmount(BigDecimal amount) {
-        this.amount = amount;
-    }
-
-    public String getCurrency() {
-        return currency;
-    }
-
-    public void setCurrency(String currency) {
-        this.currency = currency;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(LocalDateTime createdAt) {
-        this.createdAt = createdAt;
-    }
 
     @Override
     public String toString() {
