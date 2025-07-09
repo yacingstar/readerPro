@@ -7,30 +7,30 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import lombok.Getter;
-import lombok.Setter;
+import jakarta.persistence.Lob;
+import lombok.Data;
+import lombok.ToString;
 
-@Setter
-@Getter
+@Data
+@ToString
 @Entity
 public class Cheque {
 
-    // Getters and Setters
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    private String chequeNumber;
-    private Integer bankCode;
-    private String accountNumber;
-    private BigDecimal amount;
-    private String currency;
-    private String status;
-    private LocalDateTime createdAt;
+    private String type;                // 031
+    private String reference;           // random reference
+    private String receiverRIB;         // receiver RIB
+    private String receiverAgence;      // receiver agency
+    private String senderRIP;           // sender RIP
+    private String chequeNumber;        // cheque number
+    private String senderBankCode;      // sender bank code
+    private String senderAgencyCode;    // sender agency code
+    private BigDecimal montant;         // amount
+    private LocalDateTime date;         // date
 
-    @Override
-    public String toString() {
-        return String.format("Cheque{id=%d, chequeNumber='%s', bankCode=%d, accountNumber='%s', amount=%s, currency='%s', status='%s', createdAt=%s}",
-                id, chequeNumber, bankCode, accountNumber, amount, currency, status, createdAt);
-    }
+    @Lob
+    private byte[] chequeImage;         // Binary image data
 }
